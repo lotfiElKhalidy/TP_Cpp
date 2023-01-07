@@ -12,7 +12,7 @@ class Point {
         void setX(int);
         int getY();
         void setY(int);
-        //int getCounter();
+        static int getCounter();
 
         void moveWith(int, int);
         void moveTo(int, int);

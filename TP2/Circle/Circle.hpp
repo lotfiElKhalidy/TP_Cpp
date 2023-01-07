@@ -7,8 +7,8 @@ class Circle {
         static int counter;
 
     public:
-        Point();
-        Point(int, int, int, int);
+        Circle();
+        Circle(int, int, int, int);
 
         int getX();
         void setX(int);
@@ -18,7 +18,9 @@ class Circle {
         void setW(int);
         int getH();
         void setH(int);
-        //int getCounter();
+
+        static int getCounter();
 
         void displayCoordinates();
+        std::string toString(Circle);
 };

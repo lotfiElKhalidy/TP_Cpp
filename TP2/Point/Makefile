@@ -2,7 +2,7 @@ SRC=Point.cpp main.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 
-CXXFLAGS+=-Wall -Wextra -MMD -g -O2 -fdiagnostics-color=auto
+CXXFLAGS+=-Wall -Wextra -MMD -g
 LDFLAGS= #-lSDL
 
 OBJ=$(addprefix build/,$(SRC:.cpp=.o))

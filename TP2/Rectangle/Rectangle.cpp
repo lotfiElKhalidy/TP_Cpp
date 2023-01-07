@@ -6,8 +6,8 @@ Rectangle::Rectangle() {
     y = 0;
     w = 0;
     h = 0;
-    //counter++;
-    //std::cout << "Number of objects created : " << getCounter() << std::endl;
+    counter++;
+    std::cout << "Number of objects created : " << getCounter() << std::endl;
 
 }
 
@@ -16,8 +16,8 @@ Rectangle::Rectangle(int x_entry, int y_entry, int w_entry, int h_entry) {
     y = y_entry;
     w = w_entry;
     h = h_entry;
-    //counter++;
-    //std::cout << "Number of objects created : " << getCounter() << std::endl;
+    counter++;
+    std::cout << "Number of objects created : " << getCounter() << std::endl;
 }
 
 int Rectangle::getX() {
@@ -52,12 +52,40 @@ void Rectangle::setH(int h_entry) {
     h = h_entry;
 }
 
-/*
-int Point::getCounter() {
+int Rectangle::getCounter() {
     return counter;
 }
-*/
 
-void Point::displayCoordinates() {
+void Rectangle::displayCoordinates() {
     std::cout << "x = " << getX() << ", y = " << getY() << "w = " << getW() << ", h = " << getH() << std::endl;
+}
+
+std::string Rectangle::toString(Rectangle rect) {
+    std::string result = "";
+    std::ostringstream oss;
+
+    result.append("RECTANGLE ");
+
+    oss << rect.getX();
+    result.append(oss.str());
+    oss.clear();
+    oss.seekp(0);
+    result.append(" ");    
+    
+    oss << rect.getY();
+    result.append(oss.str());
+    oss.clear();
+    oss.seekp(0);
+    result.append(" ");
+
+    oss << rect.getW();
+    result.append(oss.str());
+    oss.clear();
+    oss.seekp(0);
+    result.append(" ");
+
+    oss << rect.getH();
+    result.append(oss.str());
+
+    return result;
 }

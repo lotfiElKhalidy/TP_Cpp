@@ -7,8 +7,8 @@ class Rectangle {
         static int counter;
 
     public:
-        Point();
-        Point(int, int, int, int);
+        Rectangle();
+        Rectangle(int, int, int, int);
 
         int getX();
         void setX(int);
@@ -18,7 +18,9 @@ class Rectangle {
         void setW(int);
         int getH();
         void setH(int);
-        //int getCounter();
+        
+        static int getCounter();
 
         void displayCoordinates();
+        std::string toString(Rectangle);
 };
