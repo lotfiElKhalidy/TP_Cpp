@@ -4,7 +4,14 @@
 #include <iostream>
 
 class Statisticien {
-	
+	private:
+        bool calcul;
+        int somme;
+        int moyenne;
+
+    public:
+        bool aCalcule();
+        void acquerir(std::string);
 
 };
 

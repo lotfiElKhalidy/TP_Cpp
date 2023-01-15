@@ -9,13 +9,13 @@ OBJ=$(addprefix build/,$(SRC:.cpp=.o))
 DEP=$(addprefix build/,$(SRC:.cpp=.d))
 
 all: $(OBJ)
- 	$(CXX) -o $(EXE) $^ $(LDFLAGS)
+	$(CXX) -o $(EXE) $^ $(LDFLAGS)
 
 build/%.o: %.cpp
- 	@mkdir -p build
- 	$(CXX) $(CXXFLAGS) -o $@ -c $<
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean:
- 	rm -rf build core *.gch
+	rm -rf build prog core *.gch
 
 -include $(DEP)

@@ -1,16 +1,12 @@
 #include <iostream>
 #include "Mother.hpp"
 
-Mother::Mother() {
-    this->name = "Jane Doe";
-    this->age  = -1;
+Mother::Mother() : name("Jane Doe"), age(-1) {
     counter++;
     std::cout << "Number of objects created : " << Mother::getCounter() << std::endl;
 }
 
-Mother::Mother(std::string name_entry, int age_entry) {
-    this->name = name_entry;
-    this->age = age_entry;
+Mother::Mother(std::string name_entry, int age_entry) : name(name_entry), age(age_entry) {
     counter++;
     std::cout << "Number of objects created : " << Mother::getCounter() << std::endl;
 }

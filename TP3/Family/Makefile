@@ -1,4 +1,4 @@
-SRC=A.cpp B.cpp Main.cpp
+SRC=Mother.cpp Main.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 

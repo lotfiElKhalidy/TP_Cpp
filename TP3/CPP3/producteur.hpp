@@ -4,6 +4,14 @@
 #include <iostream>
 
 class Producteur {
+    private:
+        int travail;
+    
+    public:
+        Producteur();
+        int getTravail();
+        void setTravail(int);
+        void produire(int, std::string);
 
 };
 

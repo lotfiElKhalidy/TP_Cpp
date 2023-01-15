@@ -1,4 +1,4 @@
-SRC=A.cpp B.cpp Main.cpp
+SRC=Circle.cpp main.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 
