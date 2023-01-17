@@ -7,8 +7,8 @@ Circle::Circle() {
     y = 0;
     w = 0;
     h = 0;
-    counter++;
-    std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
 
 }
 
@@ -17,8 +17,8 @@ Circle::Circle(int x_entry, int y_entry, int w_entry, int h_entry) {
     y = y_entry;
     w = w_entry;
     h = h_entry;
-    counter++;
-    std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
 }
 
 /*Circle::Circle(int cx_entry, int cy_entry, int radius) {
@@ -60,9 +60,17 @@ void Circle::setH(int h_entry) {
     h = h_entry;
 }
 
-int Circle::getCounter() {
-    return counter;
+List * Circle::getOrder() {
+    return this->order;
 }
+
+void Circle::setOrder(List * order_entry) {
+    this->order = order_entry;
+}
+
+/*int Circle::getCounter() {
+    return counter;
+}*/
 
 void Circle::displayCoordinates() {
     std::cout << "x = " << getX() << ", y = " << getY() << "w = " << getW() << ", h = " << getH() << std::endl;

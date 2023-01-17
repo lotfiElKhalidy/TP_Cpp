@@ -4,15 +4,15 @@
 Point::Point() {
     x = 0;
     y = 0;
-    counter++;
-    std::cout << "Number of objects created : " << Point::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Point::getCounter() << std::endl;
 }
 
 Point::Point(int x_entry, int y_entry) {
     x = x_entry;
     y = y_entry;
-    counter++;
-    std::cout << "Number of objects created : " << Point::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Point::getCounter() << std::endl;
 }
 
 int Point::getX() {
@@ -31,9 +31,9 @@ void Point::setY(int y_entry) {
     y = y_entry;
 }
 
-int Point::getCounter() {
+/*int Point::getCounter() {
     return counter;
-}
+}*/
 
 void Point::moveWith(int dx, int dy) {
     setX(getX() + dx);

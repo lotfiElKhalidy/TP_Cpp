@@ -1,18 +1,24 @@
-const int LENGTH = 100;
+#ifndef LIST_HPP
+#define LIST_HPP
 
 class Circle;
 class Rectangle;
 
 class List {
     public:
-        Circle circles[LENGTH];
+        Circle * circles;
         int NumberOfCircles;
-        Rectangle rectangles[LENGTH];
+        Rectangle * rectangles;
         int NumberOfRectangles;
+        
         static int counter;
 
 
     public:
         List();
-        static int getCounter();
+        //static int getCounter();
+
+        List * initializeList();
 };
+
+#endif

@@ -1,9 +1,16 @@
+#ifndef CIRCLE_HPP
+#define CIRCLE_HPP
+
+class List;
+
 class Circle {
     private:
         int x;
         int y;
         int w;
         int h;
+
+        List * order;
         static int counter;
 
     public:
@@ -19,8 +26,13 @@ class Circle {
         int getH();
         void setH(int);
 
-        static int getCounter();
+        List * getOrder();
+        void setOrder(List *);
+
+        //static int getCounter();
 
         void displayCoordinates();
         std::string toString(Circle);
 };
+
+#endif

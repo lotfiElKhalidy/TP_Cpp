@@ -6,6 +6,12 @@ List::List() {
     this->NumberOfRectangles = 0;
 }
 
-int List::getCounter() {
+/*int List::getCounter() {
     return counter;
+}*/
+
+int List::initializeList() {
+    List * list = new List();
+
+    return list;
 }

@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Liste.hpp"
+#include "List.hpp"
 
 int main(int, char**) {
-    Liste l1;
+    List l1;
 
     return 0;
 }

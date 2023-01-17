@@ -7,8 +7,8 @@ Rectangle::Rectangle() {
     y = 0;
     w = 0;
     h = 0;
-    counter++;
-    std::cout << "Number of objects created : " << Rectangle::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Rectangle::getCounter() << std::endl;
 
 }
 
@@ -17,8 +17,8 @@ Rectangle::Rectangle(int x_entry, int y_entry, int w_entry, int h_entry) {
     y = y_entry;
     w = w_entry;
     h = h_entry;
-    counter++;
-    std::cout << "Number of objects created : " << Rectangle::getCounter() << std::endl;
+    //counter++;
+    //std::cout << "Number of objects created : " << Rectangle::getCounter() << std::endl;
 }
 
 int Rectangle::getX() {
@@ -53,9 +53,17 @@ void Rectangle::setH(int h_entry) {
     h = h_entry;
 }
 
-int Rectangle::getCounter() {
-    return counter;
+List * Rectangle::getOrder() {
+    return this->order;
 }
+
+void Rectangle::setOrder(List * order_entry) {
+    this->order = order_entry;
+}
+
+/*int Rectangle::getCounter() {
+    return counter;
+}*/
 
 void Rectangle::displayCoordinates() {
     std::cout << "x = " << getX() << ", y = " << getY() << "w = " << getW() << ", h = " << getH() << std::endl;
