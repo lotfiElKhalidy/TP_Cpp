@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include "Rectangle.hpp"
+#include "List.hpp"
 
 Rectangle::Rectangle() {
     x = 0;
@@ -9,7 +10,6 @@ Rectangle::Rectangle() {
     h = 0;
     //counter++;
     //std::cout << "Number of objects created : " << Rectangle::getCounter() << std::endl;
-
 }
 
 Rectangle::Rectangle(int x_entry, int y_entry, int w_entry, int h_entry) {
@@ -53,11 +53,11 @@ void Rectangle::setH(int h_entry) {
     h = h_entry;
 }
 
-List * Rectangle::getOrder() {
+int Rectangle::getOrder() {
     return this->order;
 }
 
-void Rectangle::setOrder(List * order_entry) {
+void Rectangle::setOrder(int order_entry) {
     this->order = order_entry;
 }
 
@@ -69,31 +69,20 @@ void Rectangle::displayCoordinates() {
     std::cout << "x = " << getX() << ", y = " << getY() << "w = " << getW() << ", h = " << getH() << std::endl;
 }
 
-std::string Rectangle::toString(Rectangle rect) {
+std::string Rectangle::toString(Rectangle rectangle) {
     std::string result = "";
     std::ostringstream oss;
 
     result.append("RECTANGLE ");
 
-    oss << rect.getX();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");    
+    oss << rectangle.getX();
+    oss << " ";
+    oss << rectangle.getY();
+    oss << " ";
+    oss << rectangle.getW();
+    oss << " ";
+    oss << rectangle.getH();
     
-    oss << rect.getY();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");
-
-    oss << rect.getW();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");
-
-    oss << rect.getH();
     result.append(oss.str());
 
     return result;

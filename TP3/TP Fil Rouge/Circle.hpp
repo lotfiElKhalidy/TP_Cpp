@@ -10,10 +10,11 @@ class Circle {
         int w;
         int h;
 
-        List * order;
         static int counter;
 
     public:
+        int order;
+        
         Circle();
         Circle(int, int, int, int);
 
@@ -26,8 +27,8 @@ class Circle {
         int getH();
         void setH(int);
 
-        List * getOrder();
-        void setOrder(List *);
+        int getOrder();
+        void setOrder(int);
 
         //static int getCounter();
 

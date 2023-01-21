@@ -60,11 +60,11 @@ void Circle::setH(int h_entry) {
     h = h_entry;
 }
 
-List * Circle::getOrder() {
+int Circle::getOrder() {
     return this->order;
 }
 
-void Circle::setOrder(List * order_entry) {
+void Circle::setOrder(int order_entry) {
     this->order = order_entry;
 }
 
@@ -83,24 +83,13 @@ std::string Circle::toString(Circle circle) {
     result.append("CIRCLE ");
 
     oss << circle.getX();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");    
-    
+    oss << " ";
     oss << circle.getY();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");
-
+    oss << " ";
     oss << circle.getW();
-    result.append(oss.str());
-    oss.clear();
-    oss.seekp(0);
-    result.append(" ");
-
+    oss << " ";
     oss << circle.getH();
+    
     result.append(oss.str());
 
     return result;

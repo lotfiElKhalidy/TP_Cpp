@@ -11,10 +11,11 @@ class Rectangle {
         int w;
         int h;
 
-        List * order;
         static int counter;
 
     public:
+        int order;
+        
         Rectangle();
         Rectangle(int, int, int, int);
 
@@ -27,8 +28,8 @@ class Rectangle {
         int getH();
         void setH(int);
 
-        List * getOrder();
-        void setOrder(List *);
+        int getOrder();
+        void setOrder(int);
         
         //static int getCounter();
 
