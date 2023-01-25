@@ -1,24 +1,24 @@
 #include <iostream>
 #include <sstream>
 #include "Circle.hpp"
+//#include "Shape.hpp"
 
-Circle::Circle() {
-    x = 0;
-    y = 0;
-    w = 0;
-    h = 0;
+Circle::Circle() : Shape() {
     //counter++;
     //std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
 
 }
 
-Circle::Circle(int x_entry, int y_entry, int w_entry, int h_entry) {
-    x = x_entry;
-    y = y_entry;
-    w = w_entry;
-    h = h_entry;
+Circle::Circle(int x_entry, int y_entry, int w_entry, int h_entry) : 
+    Shape(x_entry, y_entry, w_entry, h_entry) {
     //counter++;
     //std::cout << "Number of objects created : " << Circle::getCounter() << std::endl;
+}
+
+void Circle::displayCoordinates() {
+    std::cout << "-------- Circle -------- \n";
+    //this->point->displayCoordinates();
+    std::cout << "w = " << getW() << ", h = " << getH() << std::endl;
 }
 
 /*Circle::Circle(int cx_entry, int cy_entry, int radius) {
@@ -26,54 +26,10 @@ Circle::Circle(int x_entry, int y_entry, int w_entry, int h_entry) {
     y = cy_entry;
     counter++;
     std::cout << "Number of objects created : " << getCounter() << std::endl;
-}*/
-
-int Circle::getX() {
-    return x;
 }
 
-void Circle::setX(int x_entry) {
-    x = x_entry;
-}
-
-int Circle::getY() {
-    return y;
-}
-
-void Circle::setY(int y_entry) {
-    y = y_entry;
-}
-
-int Circle::getW() {
-    return w;
-}
-
-void Circle::setW(int w_entry) {
-    w = w_entry;
-}
-
-int Circle::getH() {
-    return h;
-}
-
-void Circle::setH(int h_entry) {
-    h = h_entry;
-}
-
-int Circle::getOrder() {
-    return this->order;
-}
-
-void Circle::setOrder(int order_entry) {
-    this->order = order_entry;
-}
-
-/*int Circle::getCounter() {
+int Circle::getCounter() {
     return counter;
-}*/
-
-void Circle::displayCoordinates() {
-    std::cout << "x = " << getX() << ", y = " << getY() << "w = " << getW() << ", h = " << getH() << std::endl;
 }
 
 std::string Circle::toString(Circle circle) {
@@ -96,3 +52,4 @@ std::string Circle::toString(Circle circle) {
 
     return result;
 }
+*/

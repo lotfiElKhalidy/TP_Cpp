@@ -34,6 +34,8 @@ class List {
         void addCircleToList(Circle);
         void addRectangleToList(Rectangle);
         void addShapeToList(Shape);
+
+        void sortLists();
         
         std::string toString();
 

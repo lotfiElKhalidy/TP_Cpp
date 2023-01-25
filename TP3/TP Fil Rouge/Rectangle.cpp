@@ -82,6 +82,8 @@ std::string Rectangle::toString(Rectangle rectangle) {
     oss << rectangle.getW();
     oss << " ";
     oss << rectangle.getH();
+    oss << "\norder : ";
+    oss << rectangle.getOrder();
     
     result.append(oss.str());
 

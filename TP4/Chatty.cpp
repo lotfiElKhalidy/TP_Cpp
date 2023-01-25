@@ -13,20 +13,22 @@ class Chatty {
         void setName(std::string);
 
         void displayChatting();
+        void test1(Chatty);
+        void test2(Chatty &);
+        void test3(Chatty *);
 
 };
 
 int main(int, char **) {
-    const int LENGTH = 5;
-    Chatty   tab1[LENGTH];
-    Chatty * tab2 = new Chatty[LENGTH];
+    Chatty c1;
+    Chatty c2;
+    Chatty * c3 = new Chatty("Papi");
 
-    for (int i=0; i<LENGTH; ++i) {
-        tab1[i].displayChatting();
-        tab2[i].displayChatting();
-    }
+    c1.test1(c1);
+    c2.test2(c2);
+    c3->test3(c3);
 
-    delete tab2;  // Didn't work
+    delete c3;
     
     return 0;
 }
@@ -54,4 +56,16 @@ void Chatty::setName(std::string name_entry) {
 
 void Chatty::displayChatting() {
     std::cout << this->getName() << " : bla bla bla" << std::endl;
+}
+
+void Chatty::test1(Chatty c) {
+    std::cout << "appel de fonction avec parametre objet et copie (destructeur appelé 2 fois) \n";
+}
+
+void Chatty::test2(Chatty & c) {
+    std::cout << "appel de fonction avec référence (pas de copie) \n";
+}
+
+void Chatty::test3(Chatty * c) {
+    std::cout << "appel de fonction avec un pointeur sur un objet (pas de copie) \n";
 }

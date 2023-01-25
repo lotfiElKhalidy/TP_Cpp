@@ -66,21 +66,25 @@ void List::setNumberOfShapes(int nbr_s) {
 }
 
 void List::addCircleToList(Circle newCircle) {
+    newCircle.order = this->getNumberOfCircles();
     this->circles[this->getNumberOfCircles()] = newCircle;
     this->NumberOfCircles++;
-    newCircle.order = this->getNumberOfCircles() + this->getNumberOfRectangles() + this->getNumberOfShapes() + 1;
 }
 
 void List::addRectangleToList(Rectangle newRectangle) {
+    newRectangle.order = this->getNumberOfRectangles();
     this->rectangles[this->getNumberOfRectangles()] = newRectangle;
     this->NumberOfRectangles++;
-    newRectangle.order = this->getNumberOfRectangles() + this->getNumberOfCircles() + this->getNumberOfShapes() + 1;
 }
 
 void List::addShapeToList(Shape newShape) {
+    newShape.order = this->getNumberOfShapes();
     this->shapes[this->getNumberOfShapes()] = newShape;
     this->NumberOfShapes++;
-    newShape.order = this->getNumberOfRectangles() + this->getNumberOfCircles() + this->getNumberOfShapes() + 1;
+}
+
+void List::sortLists() {
+
 }
 
 std::string List::toString() {

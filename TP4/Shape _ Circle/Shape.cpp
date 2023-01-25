@@ -40,6 +40,7 @@ void Shape::setOrder(int order_entry) {
 }
 
 void Shape::displayCoordinates() {
+    std::cout << "-------- Shape -------- \n";
     this->point->displayCoordinates();
     std::cout << "w = " << getW() << ", h = " << getH() << std::endl;
 }

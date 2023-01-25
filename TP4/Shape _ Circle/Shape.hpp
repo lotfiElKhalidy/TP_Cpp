@@ -4,7 +4,7 @@
 class Point;
 
 class Shape {
-    private:
+    protected:
         Point * point;
         int w;
         int h;
