@@ -23,7 +23,7 @@ class Shape {
         int getOrder();
         void setOrder(int);
 
-        void displayCoordinates();
+        virtual void displayCoordinates();
         std::string toString(Shape);
 };
 

@@ -15,11 +15,14 @@ void afficher3(Shape * s) {
 }
 
 int main(int, char**) {
-   Circle c;
+    Circle c;
    
-   afficher1(c);
-   afficher2(c);
-   afficher3(&c);
+    // Troncature : Copy the content of the mother class -> Circle becomes Shape 
+    afficher1(c);
+
+    // We always have to use pointers and references when using heritage 
+    afficher2(c);
+    afficher3(&c);
    
-   return 0;
+    return 0;
 }
