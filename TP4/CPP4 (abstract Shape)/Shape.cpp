@@ -76,30 +76,3 @@ COLORS Shape::getColor() {
 void Shape::setColor(COLORS color) {
     this->color = color;
 }
-
-void Shape::displayCoordinates() {
-    std::cout << "-------- Shape -------- \n";
-    point->displayCoordinates();
-    std::cout << "w = " << getW() << ", h = " << getH() << std::endl;
-}
-
-std::string Shape::toString() {
-    std::string result = "";
-    std::ostringstream oss;
-
-    result.append("SHAPE ");
-
-    oss << this->point->getX();
-    oss << " ";
-    oss << this->point->getY();
-    oss << " ";
-    oss << this->getW();
-    oss << " ";
-    oss << this->getH();
-    oss << "\norder : ";
-    oss << id;
-    
-    result.append(oss.str());
-
-    return result;
-}

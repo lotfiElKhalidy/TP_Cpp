@@ -1,5 +1,5 @@
-#ifndef __CPP4__FORME_HPP__
-#define __CPP4__FORME_HPP__
+#ifndef __CPP4__SHAPE_HPP__
+#define __CPP4__SHAPE_HPP__
 
 #include "Point.hpp"
 
@@ -13,10 +13,10 @@ class Shape {
         Point * point;
         int w;
         int h;
-        int order;
         COLORS color;
 
     public:
+        int order;
         static int nbShapes;
         Shape();
         Shape(Point, COLORS);
@@ -40,8 +40,8 @@ class Shape {
         COLORS getColor();
         void setColor(COLORS color);
 
-        virtual void displayCoordinates();
-        virtual std::string toString();
+        virtual void displayCoordinates() = 0;
+        virtual std::string toString() = 0;
 };
 
 #endif

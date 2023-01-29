@@ -18,8 +18,6 @@ class Circle : public Shape {
 
         void displayCoordinates();
 
-        //static int getCounter();
-
         std::string toString();
 };
 

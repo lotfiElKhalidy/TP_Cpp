@@ -43,11 +43,6 @@ void Circle::displayCoordinates() {
     std::cout << "w = " << getW() << ", h = " << getH() << std::endl;
 }
 
-
-/*int Circle::getCounter() {
-    return counter;
-}*/
-
 std::string Circle::toString() {
     std::string result = "";
     std::ostringstream oss;
