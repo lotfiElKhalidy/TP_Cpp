@@ -52,7 +52,6 @@ Chaine::Chaine(const Chaine & inChaine) {
 }
 
 
-
 Chaine::~Chaine() {
     delete [] tab;
 }
@@ -68,7 +67,7 @@ void Chaine::setCapacite(int capacite) {
 }
 
 
-const char * Chaine::c_str() const {
+char * Chaine::c_str() const {
    return tab;
 }
 
@@ -79,7 +78,7 @@ void Chaine::afficher(std::ostream & flux = std::cout) const {
 
 
 Chaine & Chaine::operator=(const Chaine & inChaine) {
-    std::cout << "Constructeur de copie\n";
+    std::cout << "Opérateur d'affectation\n";
 
     if (&inChaine != this) {
         delete [] tab;
@@ -99,4 +98,26 @@ Chaine & Chaine::operator=(const Chaine & inChaine) {
     }
 
     return *this;
+}
+
+
+std::ostream & operator<<(std::ostream & os, const Chaine & inChaine) {
+    std::cout << "Surcharge de l'opérateur <<\n";
+
+    if (inChaine.getCapacite()) {
+        os << inChaine.c_str();
+    }
+
+    return os;
+}
+
+char & Chaine::operator[](int index) {
+    std::cout << "Surcharge de l'opérateur []\n";
+
+    if (index >= 0 && index < capa) {
+        return this->c_str()[index];
+    } else {
+        std::cout << "Invalid index\n";
+        exit(0);
+    }
 }

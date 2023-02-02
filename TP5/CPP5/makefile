@@ -2,7 +2,7 @@ SRC=Chaine.cpp tests_catch.cpp main_test.cpp
 #SRC=$(wildcard *.cpp)  
 EXE=prog
 
-CXXFLAGS+=-Wall -Wextra -MMD -g -O2
+CXXFLAGS+=-Wall -Wextra -MMD -g -O2 -std=c++14 -pedantic
 LDFLAGS= 
 
 OBJ=$(addprefix build/,$(SRC:.cpp=.o))

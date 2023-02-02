@@ -16,11 +16,18 @@ class Chaine  {
         Chaine(const Chaine &);
         ~Chaine();
 
+
         int getCapacite() const;
         void setCapacite(int);
-        const char * c_str() const;
+        char * c_str() const;
         void afficher(std::ostream &) const;
         Chaine & operator=(const Chaine &);
+        char & operator[](int index);
+
+        //friend std::ostream operator<<(std::ostream, const Chaine &);
 };
+
+std::ostream & operator<<(std::ostream &, const Chaine &);
+
 
 #endif

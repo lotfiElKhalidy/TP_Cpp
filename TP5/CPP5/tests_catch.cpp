@@ -79,13 +79,24 @@ TEST_CASE("operateur d'affectation") {
     s1 = s1; // est ce que cela va survivre a l execution ?
 }
 
-/*
+
 TEST_CASE("Surcharge <<") {
 	const char * chaine = "une nouvelle surcharge";
 	Chaine s(chaine);
     std::stringstream ss;
-    // ss << s;  // :-)
+    ss << s;  // :-)
 
     CHECK( ss.str() == chaine ); //  test de std::string, again :-))
 }
-*/
+
+
+TEST_CASE("Surcharge []") {
+	Chaine s("une nouvelle surcharge");
+
+    char lettre = s[5];
+
+    CHECK( 0 == strcmp("o", &lettre));
+    //s[5] = l;  // Doesn't worrk :/
+    //CHECK( 0 == strcmp("e", &lettre));
+}
+
