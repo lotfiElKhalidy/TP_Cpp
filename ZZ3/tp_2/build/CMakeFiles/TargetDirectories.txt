@@ -1,0 +1,4 @@
+/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_2/build/CMakeFiles/tp2_nuage.dir
+/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_2/build/CMakeFiles/tp2_test.dir
+/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_2/build/CMakeFiles/edit_cache.dir
+/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_2/build/CMakeFiles/rebuild_cache.dir

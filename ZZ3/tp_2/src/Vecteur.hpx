@@ -1,0 +1,95 @@
+#include <iostream>
+
+class Vecteur {
+private:
+    int* tableau;
+    size_t taille;
+
+public:
+    // Constructeur par défaut
+    Vecteur() : tableau(nullptr), taille(0) {}
+
+    // Constructeur par copie
+    Vecteur(const Vecteur& other) {
+        // Implémenter la logique de la copie
+    }
+
+    // Destructeur
+    ~Vecteur() {
+        // Libérer la mémoire allouée dynamiquement
+        delete[] tableau;
+    }
+
+    // Opérateur de copie
+    Vecteur& operator=(const Vecteur& other) {
+        // Implémenter la logique de l'opérateur de copie
+        return *this;
+    }
+
+    // Méthodes pour l'insertion sur le flux de sortie
+    friend std::ostream& operator<<(std::ostream& os, const Vecteur& vecteur) {
+        // Implémenter la logique de l'insertion sur le flux de sortie
+        return os;
+    }
+
+    // Opérateur de concaténation
+    Vecteur operator+(const Vecteur& other) {
+        // Implémenter la logique de la concaténation
+        return *this;
+    }
+
+    // Accès direct
+    int& operator[](size_t index) {
+        // Implémenter la logique de l'accès direct en écriture
+        return tableau[index];
+    }
+
+    const int& operator[](size_t index) const {
+        // Implémenter la logique de l'accès direct en lecture
+        return tableau[index];
+    }
+
+    // Opérateur de produit scalaire
+    int operator*(const Vecteur& other) {
+        // Implémenter la logique du produit scalaire
+        return 0;
+    }
+
+    // Définition de la classe Iterateur
+    class Iterateur {
+    private:
+        // Définir les attributs nécessaires
+
+    public:
+        // Méthodes de l'itérateur
+        Iterateur begin() {
+            // Implémenter l'itérateur au début du vecteur
+            return *this;
+        }
+
+        Iterateur end() {
+            // Implémenter l'itérateur à la fin du vecteur
+            return *this;
+        }
+
+        Iterateur& operator++() {
+            // Implémenter le passage à l'élément suivant (préfixé)
+            return *this;
+        }
+
+        Iterateur operator++(int) {
+            // Implémenter le passage à l'élément suivant (postfixé)
+            return *this;
+        }
+
+        int operator*() {
+            // Implémenter l'accès à l'élément pointé
+            return 0;
+        }
+
+        bool operator==(const Iterateur& other) {
+            // Implémenter la comparaison entre deux itérateurs
+            return false;
+        }
+    };
+};
