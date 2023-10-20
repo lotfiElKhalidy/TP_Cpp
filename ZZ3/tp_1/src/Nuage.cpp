@@ -19,4 +19,4 @@ Cartesien barycentre(Nuage n) {
     }
 
     return Cartesien(total_x / n.size(), total_y / n.size());
-} 
+}

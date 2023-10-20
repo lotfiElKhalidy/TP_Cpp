@@ -2,6 +2,7 @@
 #define NUAGE_HPP
 
 #include <vector>
+#include <typeinfo>
 #include "Cartesien.hpp"
 #include "Polaire.hpp"
 
@@ -48,21 +49,27 @@ void Nuage<T>::ajouter(const T & p) {
 }
 
 template <typename T>
-Cartesien barycentre_v1(const Nuage<T> & n) {
+T barycentre_v1(const Nuage<T> & n) {
     double total_x = .0, total_y = .0;
     
     if (n.size() == 0) {
-        return Cartesien(total_x, total_y);
+        return T(total_x, total_y);
     } else {
-        Cartesien c;
+        T t;
 
         for (const T &p : n) {
-            p.convertir(c);
-            total_x += c.getX();
-            total_y += c.getY();
-        }
+            p.convertir(t);
+            if constexpr (std::is_same<T, Cartesien>::value) {
+                total_x += t.getX();
+                total_y += t.getY();
+            } else if constexpr (std::is_same<T, Polaire>::value) {
+                total_x += t.getAngle();
+                total_y += t.getDistance();
+            }
 
-        return Cartesien(total_x / n.size(), total_y / n.size());
+        }
+        
+        return T(total_x / n.size(), total_y / n.size());
     }
 }
 
@@ -73,6 +80,31 @@ Polaire barycentre_v2(const Nuage<T> & n) {
     c.convertir(p);
 
     return p;
+}
+
+template <typename T>
+T barycentre_v2(const std::vector<T> & n) {
+    double total_x = .0, total_y = .0;
+    
+    if (n.size() == 0) {
+        return T(total_x, total_y);
+    } else {
+        T t;
+
+        for (const T &p : n) {
+            p.convertir(t);
+            if constexpr (std::is_same<T, Cartesien>::value) {
+                total_x += t.getX();
+                total_y += t.getY();
+            } else if constexpr (std::is_same<T, Polaire>::value) {
+                total_x += t.getAngle();
+                total_y += t.getDistance();
+            }
+
+        }
+        
+        return T(total_x / n.size(), total_y / n.size());
+    }
 }
 
 #endif
