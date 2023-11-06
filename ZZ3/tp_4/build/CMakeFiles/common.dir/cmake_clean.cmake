@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/common.dir/src/Carte.cpp.o"
   "CMakeFiles/common.dir/src/Carte.cpp.o.d"
+  "CMakeFiles/common.dir/src/Consommateur.cpp.o"
+  "CMakeFiles/common.dir/src/Consommateur.cpp.o.d"
+  "CMakeFiles/common.dir/src/Ressource.cpp.o"
+  "CMakeFiles/common.dir/src/Ressource.cpp.o.d"
   "CMakeFiles/common.dir/src/Usine.cpp.o"
   "CMakeFiles/common.dir/src/Usine.cpp.o.d"
 )

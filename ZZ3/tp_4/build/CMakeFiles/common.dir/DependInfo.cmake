@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/src/Carte.cpp" "CMakeFiles/common.dir/src/Carte.cpp.o" "gcc" "CMakeFiles/common.dir/src/Carte.cpp.o.d"
-  "/mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/src/Usine.cpp" "CMakeFiles/common.dir/src/Usine.cpp.o" "gcc" "CMakeFiles/common.dir/src/Usine.cpp.o.d"
+  "/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/src/Carte.cpp" "CMakeFiles/common.dir/src/Carte.cpp.o" "gcc" "CMakeFiles/common.dir/src/Carte.cpp.o.d"
+  "/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/src/Consommateur.cpp" "CMakeFiles/common.dir/src/Consommateur.cpp.o" "gcc" "CMakeFiles/common.dir/src/Consommateur.cpp.o.d"
+  "/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/src/Ressource.cpp" "CMakeFiles/common.dir/src/Ressource.cpp.o" "gcc" "CMakeFiles/common.dir/src/Ressource.cpp.o.d"
+  "/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/src/Usine.cpp" "CMakeFiles/common.dir/src/Usine.cpp.o" "gcc" "CMakeFiles/common.dir/src/Usine.cpp.o.d"
   )
 
 # Targets to which this target links.

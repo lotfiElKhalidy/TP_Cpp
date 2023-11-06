@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4
+# Install script for directory: /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

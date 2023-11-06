@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/tp4_mouchard.dir/test/test_mouchard.cpp.o CMakeFiles/common.dir/src/Carte.cpp.o CMakeFiles/common.dir/src/Usine.cpp.o -o tp4_mouchard 
+/usr/bin/c++ -Wall -Wextra -pedantic  CMakeFiles/tp4_mouchard.dir/test/test_mouchard.cpp.o CMakeFiles/common.dir/src/Carte.cpp.o CMakeFiles/common.dir/src/Ressource.cpp.o CMakeFiles/common.dir/src/Usine.cpp.o CMakeFiles/common.dir/src/Consommateur.cpp.o -o tp4_mouchard 

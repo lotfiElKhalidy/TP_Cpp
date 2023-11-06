@@ -1,19 +1,22 @@
 #ifndef _USINE_HPP_
 #define _USINE_HPP_
 
+#include <sstream>
+#include <vector>
 #include <memory>
 
 class Carte;
 
 class UsineCarte {
     private:
-        static int compteur;
+        //static int compteur;
 
     public:
         UsineCarte() = default;
         UsineCarte(const int &);
         UsineCarte(const UsineCarte&) = delete;
         UsineCarte& operator=(const UsineCarte&) = delete;
+        ~UsineCarte();
 
         int numberOfCards = 52;
         

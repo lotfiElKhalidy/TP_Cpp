@@ -16,10 +16,10 @@ endif ()
 set ( PROJECT_HEADERS
       src/Carte.hpp
       src/complexe.hpp
-      #src/consommateur.hpp
+      src/Consommateur.hpp
       src/mouchard.hpp
-      #src/paquet.hpp
-      #src/ressource.hpp
+      #src/Paquet.hpp
+      src/Ressource.hpp
       src/Usine.hpp
       src/vecteur.hpp
     )
@@ -27,8 +27,9 @@ set ( PROJECT_HEADERS
 set ( PROJECT_SOURCES
       src/Carte.cpp
       #src/paquet.cpp
-      #src/ressource.cpp
+      src/Ressource.cpp
       src/Usine.cpp
+      src/Consommateur.cpp
     )
 
 set ( TEST_HEADERS

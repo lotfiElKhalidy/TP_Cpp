@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4
+CMAKE_SOURCE_DIR = /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/build
+CMAKE_BINARY_DIR = /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/build/CMakeFiles /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/build/CMakeFiles /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/local.isima.fr/loelkhalid/ZZ3/TP_Cpp/ZZ3/tp_4/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/local.isima.fr/loelkhalid/ZZ3/C++/tp_4/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,54 @@ src/Carte.s: src/Carte.cpp.s
 src/Carte.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Carte.cpp.s
 .PHONY : src/Carte.cpp.s
+
+src/Consommateur.o: src/Consommateur.cpp.o
+.PHONY : src/Consommateur.o
+
+# target to build an object file
+src/Consommateur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Consommateur.cpp.o
+.PHONY : src/Consommateur.cpp.o
+
+src/Consommateur.i: src/Consommateur.cpp.i
+.PHONY : src/Consommateur.i
+
+# target to preprocess a source file
+src/Consommateur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Consommateur.cpp.i
+.PHONY : src/Consommateur.cpp.i
+
+src/Consommateur.s: src/Consommateur.cpp.s
+.PHONY : src/Consommateur.s
+
+# target to generate assembly for a file
+src/Consommateur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Consommateur.cpp.s
+.PHONY : src/Consommateur.cpp.s
+
+src/Ressource.o: src/Ressource.cpp.o
+.PHONY : src/Ressource.o
+
+# target to build an object file
+src/Ressource.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Ressource.cpp.o
+.PHONY : src/Ressource.cpp.o
+
+src/Ressource.i: src/Ressource.cpp.i
+.PHONY : src/Ressource.i
+
+# target to preprocess a source file
+src/Ressource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Ressource.cpp.i
+.PHONY : src/Ressource.cpp.i
+
+src/Ressource.s: src/Ressource.cpp.s
+.PHONY : src/Ressource.s
+
+# target to generate assembly for a file
+src/Ressource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/src/Ressource.cpp.s
+.PHONY : src/Ressource.cpp.s
 
 src/Usine.o: src/Usine.cpp.o
 .PHONY : src/Usine.o
@@ -341,6 +389,12 @@ help:
 	@echo "... src/Carte.o"
 	@echo "... src/Carte.i"
 	@echo "... src/Carte.s"
+	@echo "... src/Consommateur.o"
+	@echo "... src/Consommateur.i"
+	@echo "... src/Consommateur.s"
+	@echo "... src/Ressource.o"
+	@echo "... src/Ressource.i"
+	@echo "... src/Ressource.s"
 	@echo "... src/Usine.o"
 	@echo "... src/Usine.i"
 	@echo "... src/Usine.s"
